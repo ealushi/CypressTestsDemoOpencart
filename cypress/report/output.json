@@ -1,0 +1,284 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-08-01T23:17:59.109Z",
+    "end": "2021-08-01T23:18:56.121Z",
+    "duration": 37543,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e43a6b73-b0e0-47d1-afbf-b5934022b58f",
+      "title": "",
+      "fullFile": "cypress/integration/demoOpenCartTests/PlaceOrder.spec.js",
+      "file": "cypress/integration/demoOpenCartTests/PlaceOrder.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1969d49f-fa93-40f2-9f0d-44ad3be279b8",
+          "title": "Test Place Order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful Place Order",
+              "fullTitle": "Test Place Order Successful Place Order",
+              "timedOut": null,
+              "duration": 16803,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const hp = new _HomePage.default();\nconst cp = new _CheckoutPage.default();\nconst pp = new _ProductPage.default();\nhp.visit();\nhp.selectProduct('MacBook');\npp.addToCart();\nhp.visit();\nhp.selectProduct('iPhone');\npp.addToCart();\ncp.visit();\ncp.checkout();\ncy.get('[id=checkout-cart]').find('div').should('not.have.class', 'alert-danger');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '[ <div.alert.alert-danger.alert-dismissible>, 32 more... ]' not to have class 'alert-danger'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '[ <div.alert.alert-danger.alert-dismissible>, 32 more... ]' not to have class 'alert-danger'\n    at Context.eval (https://demo.opencart.com/__cypress/tests?p=cypress\\integration\\demoOpenCartTests\\PlaceOrder.spec.js:242:46)",
+                "diff": null
+              },
+              "uuid": "883dffd4-3746-473e-8da5-c7aef2e7714a",
+              "parentUUID": "1969d49f-fa93-40f2-9f0d-44ad3be279b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "883dffd4-3746-473e-8da5-c7aef2e7714a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16803,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "05644b4d-bf04-4bc7-abe0-9a12973e6012",
+      "title": "",
+      "fullFile": "cypress/integration/demoOpenCartTests/RegisterAccount.spec.js",
+      "file": "cypress/integration/demoOpenCartTests/RegisterAccount.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8269262-d92d-4b5f-bead-78b8095e589d",
+          "title": "Test Account Registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful Account Registration",
+              "fullTitle": "Test Account Registration Successful Account Registration",
+              "timedOut": null,
+              "duration": 7057,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const rp = new _RegisterPage.default();\nrp.visit();\nrp.fillFirstName('TestFirstName');\nrp.fillLastName('TestLastName');\nrp.fillEmail('testMail36@ymail.com');\nrp.fillTelephone('+35569');\nrp.fillPassword('Test123!');\nrp.fillPasswordConfirm('Test123!');\nrp.agreeToPolicy();\nrp.continue();\ncy.get('[id=content]').should('contain', 'Your Account Has Been Created!');\nrp.continueToSite();",
+              "err": {},
+              "uuid": "e341392a-a270-442a-aa25-57241668b477",
+              "parentUUID": "c8269262-d92d-4b5f-bead-78b8095e589d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e341392a-a270-442a-aa25-57241668b477"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7057,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "76fff304-32c3-4650-ad2b-c83fe07bf97a",
+      "title": "",
+      "fullFile": "cypress/integration/demoOpenCartTests/SearchFilter.spec.js",
+      "file": "cypress/integration/demoOpenCartTests/SearchFilter.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94baca37-6acf-4566-b574-94e9ff24f762",
+          "title": "Test Search and Filter",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful Search and Filter",
+              "fullTitle": "Test Search and Filter Successful Search and Filter",
+              "timedOut": null,
+              "duration": 5257,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const hp = new _HomePage.default();\nconst sp = new _SearchPage.default();\nhp.visit();\nsp.search('iphone');\nsp.selectSortBy('Price (Low > High)');\nsp.selectDisplayNr('50');\ncy.get('[id=content]').should('contain', 'Products meeting the search criteria');",
+              "err": {},
+              "uuid": "cd4a2e27-4137-4e9f-9420-04276c145e9d",
+              "parentUUID": "94baca37-6acf-4566-b574-94e9ff24f762",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cd4a2e27-4137-4e9f-9420-04276c145e9d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5257,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "3b843ae0-95cb-4a58-8e3c-2ae77a5b2f5e",
+      "title": "",
+      "fullFile": "cypress/integration/demoOpenCartTests/AddToWishlist.spec.js",
+      "file": "cypress/integration/demoOpenCartTests/AddToWishlist.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e10d10ee-a1ad-4f7c-a39c-83b3be15bd54",
+          "title": "Test Place Order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful Place Order",
+              "fullTitle": "Test Place Order Successful Place Order",
+              "timedOut": null,
+              "duration": 8426,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const hp = new _HomePage.default();\nconst pp = new _ProductPage.default();\nconst myFavItem = 'MacBook';\nhp.visit();\nhp.selectProduct(myFavItem);\npp.addToWishlist();\ncy.get('[id=product-product]').find('div').should('have.class', 'alert-success').should('contain', myFavItem);",
+              "err": {},
+              "uuid": "c4edfb42-e5e2-48f7-9c4f-1510640ee978",
+              "parentUUID": "e10d10ee-a1ad-4f7c-a39c-83b3be15bd54",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c4edfb42-e5e2-48f7-9c4f-1510640ee978"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8426,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

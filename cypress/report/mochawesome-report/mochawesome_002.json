@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-01T23:18:38.264Z",
+    "end": "2021-08-01T23:18:45.392Z",
+    "duration": 7128,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "05644b4d-bf04-4bc7-abe0-9a12973e6012",
+      "title": "",
+      "fullFile": "cypress/integration/demoOpenCartTests/RegisterAccount.spec.js",
+      "file": "cypress/integration/demoOpenCartTests/RegisterAccount.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8269262-d92d-4b5f-bead-78b8095e589d",
+          "title": "Test Account Registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful Account Registration",
+              "fullTitle": "Test Account Registration Successful Account Registration",
+              "timedOut": null,
+              "duration": 7057,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const rp = new _RegisterPage.default();\nrp.visit();\nrp.fillFirstName('TestFirstName');\nrp.fillLastName('TestLastName');\nrp.fillEmail('testMail36@ymail.com');\nrp.fillTelephone('+35569');\nrp.fillPassword('Test123!');\nrp.fillPasswordConfirm('Test123!');\nrp.agreeToPolicy();\nrp.continue();\ncy.get('[id=content]').should('contain', 'Your Account Has Been Created!');\nrp.continueToSite();",
+              "err": {},
+              "uuid": "e341392a-a270-442a-aa25-57241668b477",
+              "parentUUID": "c8269262-d92d-4b5f-bead-78b8095e589d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e341392a-a270-442a-aa25-57241668b477"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7057,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

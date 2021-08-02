@@ -1,0 +1,23 @@
+{
+  "name": "opencart-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ryn-cy": "npx cypress run --reporter mochawesome",
+    "merge": "npx mochawesome-merge cypress/report/mochawesome-report/*.json>cypress/report/output.json",
+    "convert": "npx marge cypress/report/output.json --reportDir ./ --inline"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.1.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  },
+  "dependencies": {
+    "cypress-mochawesome-reporter": "^2.2.1",
+    "mocha": "^9.0.3"
+  }
+}
